@@ -1,0 +1,12 @@
+[Unit]
+Description=Test
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/yum install -y wget
+#ExecStart=/usr/bin/yum install git
+ExecStart=git clone https://github.com/ioanabirsan/mlmos.git
+ExecStart=/bin/bash /root/repositories/mlmos/homework1/hello.sh
+
+[Install]
+WantedBy=multi-user.target

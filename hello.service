@@ -1,0 +1,10 @@
+[Unit]
+Description=Test
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /root/repositories/mlmos/homework1/preboot.sh
+ExecStart=/bin/bash /root/repositories/mlmos/homework1/hello.sh
+
+[Install]
+WantedBy=multi-user.target
