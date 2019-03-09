@@ -38,6 +38,9 @@ echo "AuthorizedKeyFile  /etc/ssh/authorized_keys" >> $sshConfig
 echo "PasswordAuthentication no" >> $sshConfig
 echo "ChallengeResponseAuthentication no" >> $sshConfig
 
+cp /root/repositories/mlmos/homework1/authorized_keys /etc/ssh/
+
+systemctl restart sshd.service
 log "Finished configuring ssh authentication"
 
 log "The host is configured"
