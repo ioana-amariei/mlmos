@@ -10,12 +10,13 @@ log "Updating all packages"
 yum update -y
 
 selinux=$(grep "^SELINUX=" '/etc/selinux/config' | cut -d'=' -f2) 
-if [ "$selinux" == "disabled" ]; then
-	log "SELINUX is disabled; running setenforce 0"
-	setenforce 0
-else
-	log "SELINUX is not disabled; current value: $selinux"
+if [ "$selinux" != "disabled" ]; then
+	log "Disable SELINUX"
+	sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 fi
+
+log "Running setenforce 0"
+setenforce 0
 
 log "Configuring the network intefaces"
 baseIp="192.167.60"
