@@ -1,16 +1,43 @@
 #!/bin/bash
 
-logs=/var/log/system-bootstrap.log
+function log() {
+	echo "$1" >> '/var/log/system-bootstrap.log'
+}
 
-echo "Hello World!" >> $logs
+log "Starting the host configuration process"
 
-file=/etc/selinux/config
-selinux=$(grep "^SELINUX=" $file | cut -d'=' -f2) 
+log "Updating all packages"
+yum update -y
 
-if [[ "$selinux" == "disabled" ]]; then
-	echo "SELINUX is disabled; running setenforce 0" >> $logs
+selinux=$(grep "^SELINUX=" '/etc/selinux/config' | cut -d'=' -f2) 
+if [ "$selinux" == "disabled" ]; then
+	log "SELINUX is disabled; running setenforce 0"
 	setenforce 0
 else
-	echo "SELINXU is not disbled; current value: $selinux"
+	log "SELINXU is not disbled; current value: $selinux"
 fi
 
+
+log "Configuring the network intefaces"
+baseIp="192.167.60"
+index=0
+for interface in $(ls /sys/class/net); do
+        if [ "$interface" != "lo" ] && [ "$interface" != "enp0s8" ]; then
+                log "Configuring $interface"
+                ifup $interface
+                ifconfig $interface "$baseIp.$index"
+                let index=${index}+1
+        fi
+done
+
+
+log "Configuring ssh authentication"
+sshConfig='/etc/ssh/sshd_config'
+echo "PubkeyAuthentication yes" >> $sshConfig
+echo "AuthorizedKeyFile  /etc/ssh/authorized_keys" >> $sshConfig
+echo "PasswordAuthentication no" >> $sshConfig
+echo "ChallengeResponseAuthentication no" >> $sshConfig
+
+log "Finished configuring ssh authentication"
+
+log "The host is configured"
