@@ -34,4 +34,5 @@ fi
 
 yum install git
 
+cd /root/repositories
 git clone https://github.com/ioanabirsan/mlmos.git
