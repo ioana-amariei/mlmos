@@ -1,27 +1,29 @@
 #!/bin/bash
 
+logs='/var/log/system-bootstrap.log'
+
 #function getConfigValueFor() {
-#	echo $(jq -r ".$1" bootstrap-service-config.json)
+#	echo $(jq -r ".$1" /etc/systemd/system/preboot.json)
 #}
 
 function getConfigValueFor() {
-	echo $(grep "$1=" bootstrap-service-config.properties | cut -d'=' -f2)
+	echo $(grep "$1=" /etc/systemd/system/preboot.properties | cut -d'=' -f2)
 }
 
-if [[ ! -f bootstrap-service-config.json ]]; then
-	echo "The configuration file is not present"
-	return -1 
+if [ ! -f '/etc/systemd/system/preboot.properties' ]; then
+	echo "The configuration file is not present" >> $logs
+	exit
 fi 
 
 hostname=$(getConfigValueFor 'hostname')
 if [[ "$hostname" != "null" ]]; then
-	echo "Setting the hostname to: $hostname"
+	echo "Setting the hostname to: $hostname" >> $logs
 	hostnamectl set-hostname "$hostname"
 fi
 
 device=$(getConfigValueFor 'device')
 if [[ "$device" != "null" ]]; then
-	echo "Starting the network interface: $device"
+	echo "Starting the network interface: $device" >> $logs
 	ifup $device
 fi
 
@@ -34,5 +36,7 @@ fi
 
 yum install git
 
-cd /root/repositories
+echo "Cloning the repository" >> $logs
+cd /root/repositories 
+rm -rf mlmos
 git clone https://github.com/ioanabirsan/mlmos.git

@@ -3,7 +3,7 @@ Description=Test
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash preboot.sh
+ExecStart=/bin/bash /etc/systemd/system/preboot.sh
 ExecStart=/bin/bash /root/repositories/mlmos/homework1/hello.sh
 
 [Install]
