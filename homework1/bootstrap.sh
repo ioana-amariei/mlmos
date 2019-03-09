@@ -34,11 +34,12 @@ done
 log "Configuring ssh authentication"
 sshConfig='/etc/ssh/sshd_config'
 echo "PubkeyAuthentication yes" >> $sshConfig
-echo "AuthorizedKeyFile  /etc/ssh/authorized_keys" >> $sshConfig
+echo "AuthorizedKeyFile /etc/ssh/authorized_keys" >> $sshConfig
 echo "PasswordAuthentication no" >> $sshConfig
 echo "ChallengeResponseAuthentication no" >> $sshConfig
 
 cp /root/repositories/mlmos/homework1/authorized_keys /etc/ssh/
+chmod 600 /etc/ssh/authorized_keys
 
 systemctl restart sshd.service
 log "Finished configuring ssh authentication"
