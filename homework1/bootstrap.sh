@@ -25,7 +25,7 @@ for interface in $(ls /sys/class/net); do
         if [ "$interface" != "lo" ] && [ "$interface" != "enp0s8" ]; then
                 log "Configuring $interface"
                 ifup $interface
-                ifconfig $interface "$baseIp.$index"
+                #ifconfig $interface "$baseIp.$index"
                 let index=${index}+1
         fi
 done
