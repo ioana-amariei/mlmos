@@ -37,6 +37,7 @@ fi
 yum install git
 
 echo "Cloning the repository" >> $logs
-#cd /root/repositories 
-#rm -rf mlmos
-#git clone https://github.com/ioanabirsan/mlmos.git
+mkdir /root/repositories
+cd /root/repositories 
+rm -rf mlmos
+git clone https://github.com/ioanabirsan/mlmos.git
