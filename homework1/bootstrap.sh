@@ -1,7 +1,12 @@
 #!/bin/bash
 
+function getConfigValueFor() {
+        echo $(grep "$1=" /root/repositories/mlmos/homework1/bootstrap.properties | cut -d'=' -f2)
+}
+
+logs=$(getConfigValueFor 'logs')
 function log() {
-	echo "$1" >> '/var/log/system-bootstrap.log'
+	echo "$1" >> $logs
 }
 
 log "Starting the host configuration process"
@@ -9,16 +14,27 @@ log "Starting the host configuration process"
 log "Updating all packages"
 yum update -y
 
-selinux=$(grep "^SELINUX=" '/etc/selinux/config' | cut -d'=' -f2) 
+log "Installing required software packages"
+requiredSoftwarePackages=$(getConfigValueFor 'requiredSoftwarePackages')
+for package in $requiredSoftwarePackages; do
+	log "Installing $package"
+	yum install -y $package
+done
+
+selinuxConfigFile=$(getConfigValueFor 'selinuxConfigFile')
+selinux=$(grep "^SELINUX=" "$selinuxConfigFile" | cut -d'=' -f2) 
 if [ "$selinux" == "disabled" ]; then
-	log "SELINUX is disabled; running setenforce 0"
-	setenforce 0
+	log "SELINUX is disabled; nothing to do"
 else
-	log "SELINUX is not disabled; current value: $selinux"
+        log "Disabling SELINUX"
+        sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 fi
 
+log "Configuring setenforce 0"
+setenforce 0
+
 log "Configuring the network intefaces"
-baseIp="192.167.60"
+baseIp=$(getConfigValueFor 'baseIp')
 index=0
 for interface in $(ls /sys/class/net); do
         if [ "$interface" != "lo" ] && [ "$interface" != "enp0s8" ]; then
@@ -31,14 +47,24 @@ done
 
 
 log "Configuring ssh authentication"
-sshConfig='/etc/ssh/sshd_config'
-echo "PubkeyAuthentication yes" >> $sshConfig
-#echo "AuthorizedKeysFile /etc/ssh/authorized_keys" >> $sshConfig
-echo "PasswordAuthentication no" >> $sshConfig
-echo "ChallengeResponseAuthentication no" >> $sshConfig
+sshConfigFile=$(getConfigValueFor 'sshConfigFile')
 
-mkdir -P ~/.ssh
+sed -i 's/^PubkeyAuthentication.*//' $sshConfigFile
+sed -i 's/^AuthorizedKeysFile.*//' $sshConfigFile
+sed -i 's/^PasswordAuthentication.*//' $sshConfigFile
+sed -i 's/^ChallengeResponseAuthentication.*//' $sshConfigFile
+sed -i 's/^RSAAuthentication.*//' $sshConfigFile
+
+
+echo "PubkeyAuthentication yes" >> $sshConfigFile
+echo "AuthorizedKeysFile ~/.ssh/authorized_keys" >> $sshConfigFile
+echo "PasswordAuthentication no" >> $sshConfigFile
+echo "ChallengeResponseAuthentication no" >> $sshConfigFile
+echo "RSAAuthentication yes" >> $sshConfigFile
+
+mkdir -p ~/.ssh
 cp /root/repositories/mlmos/homework1/authorized_keys ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 
 systemctl restart sshd
