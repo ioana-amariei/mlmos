@@ -27,7 +27,7 @@ if [ "$selinux" == "disabled" ]; then
 	log "SELINUX is disabled; nothing to do"
 else
         log "Disabling SELINUX"
-        sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
+        sed -i 's/^SELINUX=.*/SELINUX=disabled/' "$selinuxConfigFile"
 fi
 
 log "Configuring setenforce 0"
@@ -37,9 +37,10 @@ log "Configuring the network intefaces"
 baseIp=$(getConfigValueFor 'baseIp')
 index=0
 for interface in $(ls /sys/class/net); do
-        if [ "$interface" != "lo" ] && [ "$interface" != "enp0s8" ]; then
-                log "Configuring $interface"
-                ifup $interface
+	log "Configuring $interface"
+	ifup $interface
+
+	if [ "$interface" != "lo" ]; then
                 #ifconfig $interface "$baseIp.$index"
                 let index=${index}+1
         fi
