@@ -34,7 +34,7 @@ fi
 # Install the jq utility for parsing configuration files in json format
 #yum install -y jq
 
-yum install git
+yum install -y git
 
 echo "Cloning the repository" >> $logs
 mkdir /root/repositories
