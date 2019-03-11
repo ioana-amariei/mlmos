@@ -3,15 +3,16 @@
 ### Homework 1
 
 1. Steps:
-   1. Make repo public (doesn't require usename and password authentication when cloned)
-   2. If we want to run setup on a new machine:
+   1. Uninstall previous installed packages: `yum remove <package_name>`
+   2. Make repo public (doesn't require usename and password authentication when cloned)
+   3. If we want to run setup on a new machine:
       * copy _configNet_ function in bashrc
       * copy _cvm_ alias in bashrc
       * run commands: 
-        * `wget https://github.com/ioanabirsan/mlmos/blob/master/homework1/bootstrap.service`
-        * `wget https://github.com/ioanabirsan/mlmos/blob/master/homework1/preboot.properties`
-        * `wget https://github.com/ioanabirsan/mlmos/blob/master/homework1/preboot.sh`
-        * `wget https://github.com/ioanabirsan/mlmos/blob/master/homework1/setup.sh`
+        * `wget https://raw.githubusercontent.com/ioanabirsan/mlmos/master/homework1/bootstrap.service?token=AVqVWVfCd-l8hXcPkh_mu_g9Y7mqWSGQks5cj1oQwA%3D%3D`
+        * `wget https://raw.githubusercontent.com/ioanabirsan/mlmos/master/homework1/preboot.properties?token=AVqVWRz3q6TwA1a0y9O-4jbP4Z3iqqIaks5cj1olwA%3D%3D`
+        * `wget https://raw.githubusercontent.com/ioanabirsan/mlmos/master/homework1/preboot.sh?token=AVqVWXMgPd-P9XAUteEal-PBMNSnzONfks5cj1o3wA%3D%3D`
+        * `wget https://raw.githubusercontent.com/ioanabirsan/mlmos/master/homework1/setup.sh?token=AVqVWa8wtciYa_5GA9nX5U6bo_Lwsqg1ks5cj1pAwA%3D%3D`
       * run `/.setup.sh` 
 
 2. Resources:
