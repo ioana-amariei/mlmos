@@ -1,0 +1,1000 @@
+  109  ls
+  110  ./preboot.sh 
+  111  cd ..
+  112  ls
+  113  cp /etc/systemd/system/hello.service 
+  114  cp /etc/systemd/system/hello.service .
+  115  ll
+  116  mv hello.service homework1/
+  117  ll
+  118  git status
+  119  cd ..
+  120  ls
+  121  cd mlmos/
+  122  git status
+  123  ll
+  124  ls -al
+  125  git status
+  126  cd ..
+  127  ls
+  128  cd ..
+  129  ls
+  130  mkdir repos
+  131  cd repos
+  132  ls
+  133  git clone https://github.com/ioanabirsan/mlmos.git
+  134  cp ../repositories/mlmos/homework1/ .
+  135  ls
+  136  cd mlmos/
+  137  ls
+  138  cp ../../repositories/mlmos/homework1 .
+  139  cp "../../repositories/mlmos/homework1/*" .
+  140  cp ../../repositories/mlmos/homework1/ .
+  141  cp -../../repositories/mlmos/homework1/* .
+  142  cp -r ../../repositories/mlmos/homework1/ .
+  143  ll
+  144  ll homework1/
+  145  rm -rf homework1/mlmos
+  146  ll homework1/
+  147  nano hello.service 
+  148  git status
+  149  git add .
+  150  git commit -m "Add initial service and scripts"
+  151  git config --global user.email ""
+  152  git commit -m "Add initial service and scripts"
+  153  git config --global user.name ""
+  154  git commit -m "Add initial service and scripts"
+  155  git config --global user.email "ioana.c.birsan@gmail.com"
+  156  git config --global user.name "ioanabirsan"
+  157  git commit -m "Add initial service and scripts"
+  158  git status
+  159  git push
+  160  cd ~
+  161  cd /etc/systemd/system
+  162  ls
+  163  cp ~/repos/mlmos/homework1/hello.service .
+  164  rm -rf ~/repositories/mlmos/
+  165  cd ~
+  166  ls
+  167  cd repositories/
+  168  ls
+  169  cd ..
+  170  cd /etc/systemd/system
+  171  ls
+  172  cat hello.service 
+  173  cd ~/repos/mlmos/
+  174  cd homework1/
+  175  ls
+  176  nano hello.service 
+  177  cd /etc/systemd/system
+  178  ls
+  179  cd ~/repos/mlmos/
+  180  git status
+  181  git add .
+  182  git commit -m "Change file"
+  183  git push
+  184  ll
+  185  cd homework1/
+  186  ll
+  187  cat hello.sh
+  188  cat preboot.sh 
+  189  pwd
+  190  cp hello.service /etc/systemd/system
+  191  cat hello.service 
+  192  cp preboot.sh /etc/systemd/system
+  193  nano hello.service 
+  194  nano preboot.sh 
+  195  git status
+  196  git add .
+  197  git commit -m "Update implementation"
+  198  git push
+  199  cp hello.service /etc/systemd/system
+  200  cp preboot.sh /etc/systemd/system
+  201  systemctl daemon-reload
+  202  systemctl restart hello.service 
+  203  systemctl status -l hello.service 
+  204  cd /etc/systemd/system
+  205  ls
+  206  nano hello.service 
+  207  systemctl daemon-reload
+  208  systemctl restart hello.service 
+  209  systemctl status -l hello.service 
+  210  systemctl stop hello.service 
+  211  systemctl start hello.service 
+  212  systemctl status -l hello.service 
+  213  nano hello.service 
+  214  systemctl daemon-reload
+  215  systemctl start hello.service 
+  216  systemctl status -l hello.service 
+  217  pwd
+  218  nano hello.service 
+  219  systemctl daemon-reload
+  220  systemctl start hello.service 
+  221  systemctl status -l hello.service 
+  222  systemctl daemon-reload
+  223  systemctl start hello.service 
+  224  cd ~/repos/mlmos/homework1/
+  225  ls
+  226  nano hello.service 
+  227  nano setup.sh
+  228  ll
+  229  mv hello.sh bootstrap.sh
+  230  ll
+  231  mv hello.service bootstrap.service
+  232  ll
+  233  mv bootstrap-service-config.json preboot.json
+  234  ll
+  235  mv bootstrap-service-config.yaml preboot.yaml
+  236  ll
+  237  mv bootstrap-service-config.properties preboot.properties
+  238  ll
+  239  nano preboot.sh
+  240  cp bootstrap.service preboot.sh /etc/systemd/system/
+  241  systemctl daemon-reload
+  242  systemctl restart bootstrap.service
+  243  man systemctl
+  244  systemctl status -l boostrap.service
+  245  status -l boostrap.service
+  246  systemctl status -l bootsrap.service
+  247  systemctl status -l bootstrap.service
+  248  ll
+  249  nano preboot.sh
+  250  cp bootstrap.service preboot.sh /etc/systemd/system/
+  251  systemctl daemon-reload
+  252  systemctl restart bootstrap.service
+  253  ll
+  254  nano preboot.
+  255  nano preboot.sh 
+  256  cp bootstrap.service preboot.sh /etc/systemd/system/
+  257  systemctl daemon-reload
+  258  systemctl restart bootstrap.service
+  259  cp bootstrap.service preboot.sh preboot.properties /etc/systemd/system/
+  260  systemctl restart bootstrap.service
+  261  cat preboot.sh
+  262  ll
+  263  test -f bootstrap.sh
+  264  echo $(test -f bootstrap.sh)
+  265  test -f bootstrap.sh
+  266  echo $?
+  267  cd ..
+  268  test -f bootstrap.sh
+  269  echo $?
+  270  ll
+  271  cd homework1/
+  272  ll
+  273  nano preboot.
+  274  nano preboot.sh
+  275  ./preboot.sh 
+  276  cp bootstrap.service preboot.sh preboot.properties /etc/systemd/system/
+  277  systemctl daemon-reload
+  278  systemctl restart bootstrap.service
+  279  systemctl daemon-reload
+  280  systemctl start bootstrap.service
+  281  ll
+  282  cat preboot.
+  283  cat preboot.sh
+  284  ll
+  285  ll /etc/systemd/system
+  286  cat /etc/systemd/system/preboot.sh
+  287  ll
+  288  nano preboot.sh
+  289  ./preboot.sh 
+  290  cp bootstrap.service preboot.sh preboot.properties /etc/systemd/system/
+  291  systemctl daemon-reload
+  292  systemctl restart bootstrap.service
+  293  nano preboot.sh
+  294  cp bootstrap.service preboot.sh preboot.properties /etc/systemd/system/
+  295  systemctl daemon-reload
+  296  systemctl restart bootstrap.service
+  297  ll
+  298  cat setup.sh 
+  299  ./setup.sh
+  300  chmod 755 setup.sh 
+  301  ./setup.sh 
+  302  ll
+  303  ls
+  304  git status
+  305  git add .
+  306  git status
+  307  git add .
+  308  git status
+  309  git add -A
+  310  git status
+  311  git commit -m "Update implementation"
+  312  git status
+  313  git push
+  314  ls
+  315  nano bootstrap.sh
+  316  cat /etc/selinux/config 
+  317  nano bootstrap.sh
+  318  ./setup.sh 
+  319  git commit -m "Update implementation"
+  320  systemctl daemon-reload
+  321  systemctl restart bootstrap.service
+  322  systemctl status -l bootstrap.service
+  323  cat bootstrap.service 
+  324  nano bootstrap.service 
+  325  ll
+  326  cat bootstrap.service 
+  327  cat bootstrap.sh
+  328  ll
+  329  cat preboot.
+  330  cat preboot.sh
+  331  ll
+  332  cat setup.sh 
+  333  git status
+  334  git add .
+  335  git status
+  336  git commit -m "Update implementation"
+  337  git push
+  338  ll
+  339  cat setup.sh 
+  340  ./setup.sh 
+  341  systemctl daemon-reload
+  342  systemctl restart bootstrap.service
+  343  cat /root/repositories/mlmos/homework1/bootstrap.s
+  344  cat /root/repositories/mlmos/homework1/bootstrap.ss
+  345  cat /root/repositories/mlmos/homework1/bootstrap.sh
+  346  nano bootstrap.sh
+  347  nano setup.sh 
+  348  ll
+  349  nano preboot.sh
+  350  systemctl daemon-reload
+  351  touch bootstrap.properties
+  352  ./setup.sh 
+  353  systemctl daemon-reload
+  354  systemctl restart bootstrap.service
+  355  git status
+  356  ll
+  357  nano preboot.sh
+  358  nano setup.sh 
+  359  ./setup.sh 
+  360  man cp
+  361  cat setup.sh 
+  362  man cp
+  363  nano setup.sh 
+  364  man mkdir
+  365  mkdir -p /root/repositories/mlmos/homework1
+  366  ./setup.sh 
+  367  systemctl daemon-reload
+  368  systemctl restart bootstrap.service
+  369  nano bootstrap.sh
+  370  cat preboot.sh
+  371  nano bootstrap.sh
+  372  ./setup.sh 
+  373  nano setup.sh 
+  374  ./setup.sh 
+  375  nano bootstrap.
+  376  nano bootstrap.sh
+  377  ./setup.sh 
+  378  nano bootstrap.sh
+  379  ./setup.sh 
+  380  nano bootstrap.sh
+  381  ./setup.sh 
+  382  nano bootstrap.sh
+  383  ./setup.sh 
+  384  nano bootstrap.sh
+  385  ./setup.sh 
+  386  nano bootstrap.sh
+  387  ./setup.sh 
+  388  yum update
+  389  yum install -y
+  390  yum update -y
+  391  nano bootstrap.sh
+  392  ls /etc/sysconfig/network-scripts/
+  393  ip link show
+  394  man ip
+  395  ip link show -h
+  396  ip -h link show
+  397  man ip
+  398  ip -o link show
+  399  man ip
+  400  ip link
+  401  ls /sys/class/net
+  402  ls -al /sys/class/net
+  403  ls /sys/class/net | echo $1
+  404  ls /sys/class/net
+  405  ls /sys/class/net | cut -d" " -f1
+  406  nano bootstrap.
+  407  nano bootstrap.sh
+  408  nano test.sh
+  409  chmod 755 test.sh 
+  410  ./test.sh 
+  411  nano bootstrap.sh
+  412  nano test.sh
+  413  ./test.sh 
+  414  nano bootstrap.
+  415  nano bootstrap.sh
+  416  nano test.sh 
+  417  ./test.sh 
+  418  ifconfig
+  419  yum install ifconfig
+  420  man ip
+  421  yum install net-tools
+  422  ./test.sh 
+  423  cd /etc/systemd/system/
+  424  ls
+  425  systemctl status hello.service 
+  426  nano hello.service 
+  427  systemctl disable hello.service 
+  428  systemctl enable hello.service 
+  429  systemctl status hello.service 
+  430  systemctl start hello.service 
+  431  systemctl status hello.service 
+  432  cat hello.service 
+  433  nano hello.service 
+  434  systemctl daemon-reload
+  435  ls
+  436  systemctl enable hello.service 
+  437  systemctl start hello.service 
+  438  systemctl status hello.service 
+  439  configNet 
+  440  systemctl daemon-reload
+  441  systemctl status hello.service 
+  442  systemctl start hello.service 
+  443  systemctl enable hello.service 
+  444  systemctl status hello.service 
+  445  systemctl start hello.service 
+  446  configNet
+  447  ip a
+  448  ifup enp0s3
+  449  ifdown enp0s3
+  450  ifup enp0s3
+  451  netConfig
+  452  configNet
+  453  systemctl start sshd
+  454  ll
+  455  cd repos
+  456  ll
+  457  cd mlmos
+  458  ll
+  459  cd homework1/
+  460  ll
+  461  nano test.sh
+  462  ./test.sh 
+  463  nano bootstrap.sh
+  464  ssh-keygen
+  465  exit
+  466  ll
+  467  cd repos/mlmos/homework1/
+  468  ll
+  469  touch ssh-keys.pub
+  470  nano ssh-keys.pub 
+  471  cat ssh-keys.pub 
+  472  nano ssh-keys.pub 
+  473  rm ssh-keys.pub 
+  474  ll
+  475  cat /etc/ssh/sshd_config 
+  476  clear
+  477  nano bootstrap.sh
+  478  cd ..
+  479  git status
+  480  git add .
+  481  git add bootstrap.properties
+  482  git commit -m "Update implementation"
+  483  git pull
+  484  configNet
+  485  exit
+  486  alias configNet
+  487  cat ~/.bashrc
+  488  cd repos/mlmos/
+  489  git status
+  490  git pull
+  491  git push
+  492  ll
+  493  cd homework1/
+  494  ll
+  495  cat bootstrap.sh
+  496  ./setup.sh 
+  497  nano setup.sh 
+  498  ./setup.sh 
+  499  nano bootstrap.sh
+  500  service sshd reload
+  501  systemctl reload sshd.service
+  502  systemctl reload sshd
+  503  systemctl sshd reload
+  504  ./setup.sh 
+  505  nano bootstrap.sh
+  506  ./setup.sh 
+  507  nano bootstrap.
+  508  nano bootstrap.sh
+  509  ./setup.sh 
+  510  ll /etc/ssh/
+  511  ls -al /etc/ssh/
+  512  chown -R AMI:AMI /home/AMI/.ssh
+  513  less /etc/passwd
+  514  cat /etc/passwd
+  515  chmod 700 ~/.ssh
+  516  chmod 700 /etc/ssh/
+  517  chmod 600 /etc/ssh/authorized_keys 
+  518  nano bootstrap.sh
+  519  service sshd reload
+  520  systemctl restart sshd
+  521  systemctl status -l sshd
+  522  systemctl stop sshd
+  523  systemctl start sshd
+  524  systemctl stop sshd
+  525  systemctl start sshd
+  526  nano bootstrap.sh
+  527  service sshd reload
+  528  sudo service sshd reload
+  529  sudo systemctl start sshd
+  530  sudo systemctl restart sshd
+  531  systemctl restart sshd
+  532  systemctl status -l sshd
+  533  nano bootstrap.sh
+  534  ./setup.sh 
+  535  systemctl restart sshd
+  536  ps aux
+  537  ps aux | grep ssh
+  538  kill -9 3524
+  539  netConfig
+  540  configNet
+  541  ll
+  542  tail -f /var/log/system-bootstrap.log 
+  543  ll
+  544  pwd
+  545  cd repos/mlmos/
+  546  ll
+  547  git status
+  548  git add .
+  549  git status
+  550  git commit -m "Update implementation"
+  551  git push
+  552  git status
+  553  pwd
+  554  ll
+  555  git status
+  556  git push
+  557  ping www.emag.ro
+  558  ifup enp0s3
+  559  nano /etc/ssh/sshd_config 
+  560  systemctl restart sshd
+  561  ll
+  562  cd repos/mlmos/
+  563  ll
+  564  git status
+  565  git push
+  566  exit
+  567  configNet
+  568  tail -f /var/log/system-bootstrap.log 
+  569  cd repos/mlmos/
+  570  ll
+  571  cd homework1/
+  572  nano bootstrap.sh
+  573  ls -al /etc/ssh/
+  574  cd ..
+  575  git status
+  576  git add .
+  577  git status
+  578  git commit -m "Update implementation"
+  579  git push
+  580  cd homework1/
+  581  nano bootstrap.sh
+  582  git status
+  583  git commit -m "Don't change ip"
+  584  git status
+  585  git add .
+  586  git commit -m "Don't change ip"
+  587  git push
+  588  ./setup
+  589  ll
+  590  ./setup.sh 
+  591  systemctl restart sshd.service
+  592  systemctl status -l sshd.service
+  593  less /etc/ssh/sshd_config 
+  594  systemctl stop sshd.service
+  595  systemctl start sshd.service
+  596  systemctl status -l sshd.service
+  597  ll
+  598  less /etc/ssh/sshd_config 
+  599  nano /etc/ssh/sshd_config 
+  600  systemctl restart sshd.service
+  601  nano /etc/ssh/sshd_config 
+  602  systemctl stop sshd.service
+  603  systemctl start sshd.service
+  604  ll
+  605  nano bootstrap.sh
+  606  ll ~/
+  607  ll ~/.ssh
+  608  ll ~/.ssh/
+  609  nano /etc/ssh/sshd_config 
+  610  less /etc/ssh/sshd_config 
+  611  systemctl restart sshd.service
+  612  ./setup.sh 
+  613  service ssdh reload
+  614  service sshd reload
+  615  nano bootstrap.sh
+  616  systemctl restart sshd
+  617  systemctl status -l sshd
+  618  ./setup
+  619  ./setup.sh 
+  620  nano /etc/ssh/sshd_config 
+  621  nano bootstrap.sh
+  622  sudo systemctl restart ssdh
+  623  sudo systemctl restart sshd
+  624  systemctl status -l sshd
+  625  nano /etc/ssh/sshd_config 
+  626  sudo systemctl restart sshd
+  627  systemctl status -l sshd
+  628  nano /etc/ssh/sshd_config 
+  629  sudo systemctl restart sshd
+  630  systemctl status -l sshd
+  631  nano bootstrap.sh
+  632  nano /etc/ssh/sshd_config 
+  633  ./setup.sh 
+  634  nano bootstrap.sh
+  635  ./setup.sh 
+  636  systemctl status -l sshd
+  637  sudo systemctl restart sshd
+  638  systemctl status -l sshd
+  639  nano bootstrap.sh
+  640  cat /etc/selinux/config 
+  641  nano /etc/selinux/config 
+  642  ./setup.sh 
+  643  nano /etc/selinux/config 
+  644  nano bootstrap.s
+  645  nano bootstrap.sh
+  646  ./setup.sh 
+  647  cat /etc/selinux/config 
+  648  nano bootstrap.sh
+  649  sed 's/SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
+  650  man sed
+  651  cat /etc/selinux/config 
+  652  sed -i 's/SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
+  653  cat /etc/selinux/config 
+  654  nano bootstrap.sh
+  655  nano /etc/selinux/config 
+  656  ./setup.sh 
+  657  cat /etc/selinux/config 
+  658  nano /etc/selinux/config 
+  659  nano bootstrap.sh
+  660  ./setup.sh 
+  661  cat /etc/selinux/config 
+  662  nano bootstrap.sh
+  663  ./setup.sh 
+  664  cat /etc/selinux/config 
+  665  cat bootstrap.sh > my-version.sh
+  666  ls
+  667  cat my-version.sh 
+  668  nano bootstrap.sh
+  669  nano /etc/selinux/config 
+  670  ./setup.sh 
+  671  ls
+  672  ls -ls ~/.ssh
+  673  cd ~/.ssh
+  674  cd /root/.ssh
+  675  nano setup.sh 
+  676  nano bootstrap.sh
+  677  ./setup.sh 
+  678  ls -ls ~/.ssh
+  679  nano setup.sh 
+  680  nano bootstrap.sh
+  681  whoami
+  682  mkdir /etc/ssh/root
+  683  ls
+  684  chmod 755 /etc/ssh/root 
+  685  ll /etc/ssh/root/
+  686  ls /etc/ssh/root/
+  687  ll /etc/ssh/
+  688  ls /etc/ssh/
+  689  cp authorized_keys root/authorized_keys
+  690  cp authorized_keys /etc/ssh/root/authorized_keys
+  691  ll /etc/ssh/root/
+  692  chmod 644 /etc/ssh/root/authorized_keys 
+  693  ll /etc/ssh/root/
+  694  nano /etc/ssh/sshd_config
+  695  nano bootstrap.sh
+  696  sudo service ssh restart
+  697  sudo systemctl restart sshd
+  698  systemctl status -l sshd
+  699  ls
+  700  nano bootstrap.sh
+  701  nano /etc/ssh/sshd_config
+  702  nano bootstrap.sh
+  703  nano /etc/ssh/sshd_config
+  704  nano bootstrap.sh
+  705  nano /etc/ssh/sshd_config
+  706  sudo systemctl restart sshd
+  707  systemctl status -l sshd
+  708  nano bootstrap.sh
+  709  ls
+  710  cd /etc/ssh/
+  711  ls
+  712  rm root/
+  713  rm -rf root/
+  714  ls
+  715  nano /etc/ssh/sshd_config
+  716  cd ~
+  717  ls
+  718  cd repos/mlmos/homework1/
+  719  ls
+  720  ./setup.sh 
+  721  cd ..
+  722  git status
+  723  git diff
+  724  git add .
+  725  git commit -m "Update"
+  726  git status
+  727  git push
+  728  configNet
+  729  ls
+  730  cd repos/mlmos/homework1/
+  731  ls
+  732  ls /etc/ssh/
+  733  cat /etc/ssh/ssh_config 
+  734  ls /etc/ssh/
+  735  cat /etc/ssh/sshd_config 
+  736  nano /etc/ssh/sshd_config 
+  737  sudo systemctl restart sshd
+  738  systemctl status -l sshd
+  739  exit
+  740  tail -f /var/log/system-bootstrap.log 
+  741  exit
+  742  ll
+  743  cd repos
+  744  ll
+  745  cd mlmos/homework1/
+  746  ll
+  747  nano bootstrap.sh
+  748  nano preboot.sh
+  749  nano bootstrap.sh
+  750  cat preboot.sh
+  751  nano bootstrap.sh
+  752  cat pre
+  753  cat preboot.sh
+  754  nano bootstrap.properties 
+  755  nano bootstrap.sh
+  756  nano bootstrap.p
+  757  nano bootstrap.properties 
+  758  nano bootstrap.sh
+  759  nano bootstrap.properties 
+  760  nano bootstrap.sh
+  761  nano bootstrap.properties 
+  762  nano bootstrap.sh
+  763  nano bootstrap.properties 
+  764  nano bootstrap.sh
+  765  nano bootstrap.properties 
+  766  nano bootstrap.sh
+  767  cat bootstrap.properties 
+  768  nano bootstrap.sh
+  769  ./setup
+  770  ll
+  771  ./setup.sh 
+  772  cat setup.sh 
+  773  systemctl status -l bootstrap.service
+  774  nano bootstrap.sh
+  775  ./setup.sh 
+  776  systemctl status -l bootstrap.service
+  777  man mkdir
+  778  nano bootstrap.sh
+  779  ./setup.sh 
+  780  systemctl status -l bootstrap.service
+  781  nano bootstrap.sh
+  782  ./setup.sh 
+  783  systemctl status -l bootstrap.service
+  784  nano bootstrap.sh
+  785  cat preboot.sh
+  786  nano bootstrap.sh
+  787  ./setup.sh 
+  788  systemctl status -l bootstrap.service
+  789  cat setup.sh 
+  790  cat preboot.sh
+  791  nano setup.sh 
+  792  cat preboot.
+  793  cat preboot.shy
+  794  cat preboot.sh
+  795  systemctl status -l bootstrap.service
+  796  cat bootstrap.sh
+  797  cat setup.sh 
+  798  cat ../../../repositories/mlmos/homework1/bootstrap.properties 
+  799  cat preboot.sh
+  800  pwd
+  801  nano bootstrap.sh
+  802  ./setup.sh 
+  803  nano bootstrap.sh
+  804  nano bootstrap.properties 
+  805  ./setup.sh 
+  806  nano bootstrap.sh
+  807  ls
+  808  nano my-version.sh 
+  809  nano bootstrap.sh
+  810  ./setup.sh 
+  811  nano bootstrap.sh
+  812  ./setup.sh 
+  813  cat ./setup.sh 
+  814  cat bootstrap.sh
+  815  service sshd reload
+  816  cat bootstrap.properties 
+  817  less /etc/ssh/sshd_config 
+  818  ls /etc/ssh/
+  819  less /etc/ssh/ssh_config 
+  820  service ssh restart
+  821  sudo service ssh restart
+  822  service ssh restart
+  823  grep RSAAuth /etc/ssh/sshd_config 
+  824  nano bootstrap.sh
+  825  ./setup.sh 
+  826  nano bootstrap.sh
+  827  ./setup.sh 
+  828  nano bootstrap.sh
+  829  ./setup.sh 
+  830  less /etc/ssh/sshd_config 
+  831  nano bootstrap.sh
+  832  ./setup.sh 
+  833  less /etc/ssh/sshd_config 
+  834  cd ..
+  835  git status
+  836  git add .
+  837  git commit -m "Add rsa authentication"
+  838  git push
+  839  ll
+  840  rm bootstrap-service-config.json bootstrap-service-config.properties bootstrap-service-config.yaml 
+  841  ll
+  842  rm bootstrap-service-config.properties 
+  843  ll
+  844  cat bashrc 
+  845  ll
+  846  cd homework1/
+  847  ll
+  848  nano bootstrap.sh 
+  849  cd ..
+  850  git status
+  851  git add .
+  852  git add -A
+  853  git status
+  854  git commit -m "Remove unnecessary things; Refactor code"
+  855  git push
+  856  nano /etc/ssh/sshd_config 
+  857  systemctl restart sshd
+  858  service sshd reload
+  859  nano /etc/ssh/sshd_config 
+  860  cd homework1/
+  861  ./setup.sh 
+  862  nano /etc/ssh/sshd_config 
+  863  systemctl restart sshd
+  864  rm -rf /root/repositories/mlmos/
+  865  nano setup.sh 
+  866  nano preboot.sh 
+  867  ./setup.sh 
+  868  systemctl status -l bootstrap.service 
+  869  ./setup.sh 
+  870  cd ..
+  871  git status
+  872  git add .
+  873  git commit -m "Uncomment code"
+  874  git push
+  875  exit
+  876  configNet
+  877  ls
+  878  cd repos/mlmos/homework1/
+  879  ls
+  880  rm -rf my-version.sh 
+  881  nano preboot.properties 
+  882  nano preboot.sh
+  883  nano bootstrap.sh 
+  884  cd ..
+  885  cd homework1/
+  886  ./setup.sh 
+  887  cd ..
+  888  git status
+  889  git add .
+  890  git add -A
+  891  git commit -m "Make small change"
+  892  git push
+  893  git pull
+  894  git push
+  895  exit
+  896  tail -f /var/log/system-bootstrap.log 
+  897  exit
+  898  exit
+  899  cat ~/.bashrc 
+  900  nano ~/.bashrc 
+  901  exit
+  902  clear
+  903  exit
+  904  ./setup
+  905  ls
+  906  cd repos/mlmos/homework1/
+  907  ./setup
+  908  ./setup.sh 
+  909  exit
+  910  tail -f /var/log/system-bootstrap.log 
+  911  exit
+  912  configNet
+  913  xit
+  914  exit
+  915  ll
+  916  cd repos
+  917  ll
+  918  cd mlmos/
+  919  ll
+  920  git status
+  921  git pull
+  922  ll
+  923  cd homework1/
+  924  ll
+  925  ./setup.sh 
+  926  exit
+  927  tail -f /var/log/system-bootstrap.log 
+  928  exit
+  929  confignet
+  930  configNet
+  931  cd repos/mlmos/homework1/
+  932  ll
+  933  cat setup.sh 
+  934  tail -f /var/log/system-bootstrap.log 
+  935  cat ~/ssh
+  936  ll /root/ssh/
+  937  cd ..
+  938  cd mlmos/homework1/
+  939  ll
+  940  cat bootstrap.sh
+  941  cd ~/.ssh/
+  942  ll
+  943  cd ..
+  944  ll
+  945  cd repos/mlmos/homework1/
+  946  ll
+  947  cat /etc/ssh/sshd_config 
+  948  clear
+  949  nano /etc/ssh/sshd_config 
+  950  exit
+  951  systemctl restart sshd
+  952  exit
+  953  systemctl reload sshd
+  954  exit
+  955  cd repos/mlmos/homework1/
+  956  ll
+  957  cat setup.sh 
+  958  service sshd restart
+  959  exit
+  960  tail -f /var/log/system-bootstrap.log 
+  961  aliases
+  962  alias
+  963  exit
+  964  yum remove git
+  965  ll
+  966  cd repos/mlmos/
+  967  ll
+  968  cd homework1/
+  969  ll
+  970  ./setup.sh 
+  971  cd ..
+  972  ll
+  973  cd ..
+  974  ll
+  975  rm -rf repositories/
+  976  cd repos/mlmos/homework1/
+  977  ./setup.sh 
+  978  exit
+  979  tail -f /var/log/system-bootstrap.log 
+  980  exiy
+  981  exit
+  982  cd repos/mlmos/homework1/
+  983  ll
+  984  ./setup.sh 
+  985  rm -rf /root/repositories/
+  986  ll
+  987  ./setup.sh 
+  988  nano /etc/ssh/sshd_config 
+  989  ./setup.sh 
+  990  nano /etc/ssh/sshd_config 
+  991  service sshd restart
+  992  cat setup.sh 
+  993  service sshd restart
+  994  ./setup.sh 
+  995  cat /etc/ssh/sshd_config 
+  996  exit
+  997  ip a
+  998  configNet
+  999  ll
+ 1000  yum install yum-utils
+ 1001  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+ 1002  ll
+ 1003  yum install docker-ce
+ 1004  systemctl enable --now docker
+ 1005  systemctl status docker
+ 1006  docker pull hello-world:linux
+ 1007  docker images
+ 1008  docker run hello-world:linux
+ 1009  mkdir hello-world-custom
+ 1010  cd hello-world-custom/
+ 1011  nano Dockerfile
+ 1012  nano hello-world.sh
+ 1013  nano Dockerfile
+ 1014  docker build -t hello-world-custom .
+ 1015  docker images
+ 1016  docker run hello-world-custom
+ 1017  cat Dockerfile 
+ 1018  cat history
+ 1019  history
+ 1020  history >> docker-lab-commands
+ 1021  ll
+ 1022  docker run hello-world-custom
+ 1023  cd ..
+ 1024  mkdir webserver
+ 1025  cd webserver/
+ 1026  nano Dockerfile
+ 1027  docker build -t webserver:1.0 .
+ 1028  nano Dockerfile
+ 1029  docker build -t webserver:1.0 .
+ 1030  docker images
+ 1031  docker run webserver:1.0
+ 1032  docker container ps
+ 1033* 
+ 1034  nano Dockerfile
+ 1035  docker build -t webserver:1.0 .
+ 1036  docker run -d --rm --name webserver webserver:1.0
+ 1037  docker run webserver:1.0
+ 1038  docker run -d --rm --name webserver webserver:1.0
+ 1039  docker container ps
+ 1040  docker run 187aae9ec41b
+ 1041  docker container ps
+ 1042  docker container kill 187aae9ec41b
+ 1043  docker container ps
+ 1044  docker run -d --rm --name webserver webserver:1.0
+ 1045  docker container ps
+ 1046  clear
+ 1047  docker run haproxy
+ 1048  docker images
+ 1049  docker container ps
+ 1050  docker run -d --name haproxy -v /docker/volumes/haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p=80:80/tcp --link webserver haproxy
+ 1051  nano haproxy.cfg
+ 1052  docker container ps
+ 1053  docker run -d --name haproxy -v /docker/volumes/haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p=80:80/tcp --link webserver haproxy
+ 1054  docker container kill 7be89e01649247310e7f72b6174080c119b67aed79012990afe7a3e41e288691
+ 1055  docker container ps
+ 1056  docker run -d --name haproxy -v /docker/volumes/haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p=80:80/tcp --link webserver haproxy
+ 1057  docker --rm haproxy
+ 1058  -rm haproxy
+ 1059  rm haproxy
+ 1060  clear
+ 1061  docker run -d --name haproxy -v /docker/volumes/haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p=80:80/tcp --link webserver haproxy
+ 1062  docker run --help
+ 1063  docker rm haproxy
+ 1064  docker run -d --name haproxy -v /docker/volumes/haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p=80:80/tcp --link webserver haproxy
+ 1065  docker container ps
+ 1066  cat haproxy.cfg 
+ 1067  pwd
+ 1068  docker run -d --name haproxy -v /root/webserver/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p=80:80/tcp --link webserver haproxy
+ 1069  docker rm haproxy
+ 1070  docker run -d --name haproxy -v /root/webserver/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p=80:80/tcp --link webserver haproxy
+ 1071  docker container ps
+ 1072  nano haproxy.cfg 
+ 1073  docker rm haproxy
+ 1074  docker container ps
+ 1075  docker container kill b877bb7150cd
+ 1076  docker rm haproxy
+ 1077  docker run -d --name haproxy -v /root/webserver/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p=80:80/tcp --link webserver haproxy
+ 1078  docker container ps
+ 1079  clear
+ 1080  docker container ps
+ 1081  ss -tlpn
+ 1082  curl -v localhost:80
+ 1083  docker container ps
+ 1084  ll
+ 1085  cd ..
+ 1086  ll
+ 1087  cd hello-world-custom/
+ 1088  ll
+ 1089  cd ..
+ 1090  cd webserver/
+ 1091  history > /../history-lab5
+ 1092  cd ..
+ 1093  ll
+ 1094  cat history > /history-lab5
+ 1095  history > history-lab5.txt
+ 1096  ll
+ 1097  cd webserver/
+ 1098  docker container ps
+ 1099  docker exec -ti 70b452ab2f83 /bin/bash
+ 1100  curl -v localhost:80
+ 1101  docker container ps
+ 1102  docker stop 282fc09b5064
+ 1103  docker stop 70b452ab2f83
+ 1104  docker container ps
+ 1105  cd ..
+ 1106  ll
+ 1107  history history-lab5.txt 
+ 1108  history >history-lab5.txt 
